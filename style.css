@@ -86,3 +86,19 @@ ul.tabs li a:hover {
   color: black;
   border: 5px red solid;
 }
+
+.projects {
+  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-content: space-evenly;
+  border: 5px black solid;
+}
+
+.tile {
+  height: 300px;
+  width: 300px;
+  border: 3px blue solid;
+}

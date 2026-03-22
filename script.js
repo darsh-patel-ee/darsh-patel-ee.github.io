@@ -7,3 +7,13 @@ fetch("navbar.html")
     document.getElementById("navbar").innerHTML = data;
   })
   .catch(err => console.error("Failed to load navbar:", err));
+
+fetch("footer.html")
+  .then(res => {
+    if (!res.ok) throw new Error("File not found");
+    return res.text();
+  })
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  })
+  .catch(err => console.error("Failed to load footer:", err));
