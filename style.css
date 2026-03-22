@@ -1,16 +1,19 @@
-img.logo {
-    width: 32px;
-    height: 32px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav.tabs {
-    /* position: static; */
+nav {
+    width: 100%;
+    background-color: #333333;
 }
 
 ul.tabs {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  width: 100%;
   background-color: #333333;
   display: flex;
 }
@@ -24,4 +27,49 @@ ul.tabs li a {
 
 ul.tabs li a:hover {
   background-color: #111111;
+  color: red;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+  "portrait about-me"
+  "skills skills"
+  "contact contact";
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 2fr 1fr 1fr;
+}
+
+.container div.portrait {
+  grid-area: portrait;
+  background-color: green;
+}
+
+img.portrait {
+  width: 25vw;
+  aspect-ratio: 1/1;
+  
+  clip-path: circle();
+}
+
+.container div.about-me {
+  grid-area: about-me;
+  background-color: yellowgreen;
+}
+
+.container div.skills {
+  grid-area: skills;
+  background-color: teal;
+  
+}
+
+.container div.contact {
+  grid-area: contact;
+  background-color: cyan;
+}
+
+
+img.logo {
+    width: 32px;
+    height: 32px;
 }
